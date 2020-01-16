@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script that transfers a file from our client to a load balancer
+if [ $# -eq 1 ]
+then
+    scp -i ~/.ssh/holberton -o StrictHostKeyChecking=no "$1" ubuntu@34.74.24.200:~/
+else
+    echo "Usage: transfer_file_to_906-lb-01 PATH_TO_FILE"
+fi
+

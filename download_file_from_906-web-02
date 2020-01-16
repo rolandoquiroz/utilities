@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script that downloads a file from a server to our client
+if [ $# -eq 1 ]
+then
+    scp -i ~/.ssh/holberton -o StrictHostKeyChecking=no ubuntu@34.73.38.83:~/"$1" ./
+else
+    echo "Usage: 0-download_file_from_906-web-02 PATH_TO_FILE"
+fi

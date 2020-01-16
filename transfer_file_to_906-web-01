@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script that transfers a file from our client to a 906-web-01
+if [ $# -eq 1 ]
+then
+    scp -i ~/.ssh/holberton -o StrictHostKeyChecking=no "$1" ubuntu@104.196.104.147:~/
+else
+    echo "Usage: transfer_file_to_906-web-01 PATH_TO_FILE"
+fi
+
